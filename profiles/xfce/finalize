@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+touch "$BUILD/usr/lib/parallax-target/default/service-enable/lightdm" \
+	|| die "Failed to create target files!"
+
+echo "Depend=elogind" >> "$BUILD/usr/lib/parallax-service/lightdm"

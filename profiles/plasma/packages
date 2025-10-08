@@ -1,0 +1,8 @@
+# kde
+plasma-desktop systemsettings discover sddm-kcm plymouth-kcm plasma-nm konsole kinfocenter kdeplasma-addons
+plasma-pa spectacle flameshot dolphin kwrite plasma-workspace-wallpapers plasma-firewall pulseaudio-qt
+plasma-systemmonitor bluez bluedevil plasma-welcome plasma-browser-integration plasma-disks print-manager
+kwallet5 kwalletmanager kwallet kwallet-pam fwupd fwupd-efi okular kamoso
+
+# misc
+sddm-parallax noto-fonts-emoji noto-fonts-cjk

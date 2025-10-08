@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+touch "$BUILD/usr/lib/parallax-target/default/service-enable/sddm" \
+	|| die "Failed to create target files!"

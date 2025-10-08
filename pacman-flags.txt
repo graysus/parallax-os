@@ -1,0 +1,2 @@
+--assume-installed libfmt.so=11-64
+fmt

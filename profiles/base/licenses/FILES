@@ -1,0 +1,15 @@
+File                                    License to use
+======================================================
+assets/parallaxos-logo-text.png         LICENSE.MIT-pxos
+assets/parallaxos-logo-text-lowres.png  LICENSE.MIT-pxos
+assets/parallaxos-logo-dark.png         LICENSE.MIT-pxos
+assets/parallaxos-logo.png              LICENSE.MIT-pxos
+assets/parallaxos-logo-text-dark.png    LICENSE.MIT-pxos
+files/sudoers				LICENSE-sudo
+files/pxos-hook				LICENSE.MIT-pxos
+files/pxos-install			LICENSE.MIT-pxos
+files/plymouth-populate-initrd		LICENSE.GPL2
+files/install-plymouth			LICENSE.GPL2
+files/mkinitcpio.conf			LICENSE.GPL2
+files/10_linux				LICENSE.GPL3
+files/grub-default			LICENSE.GPL3

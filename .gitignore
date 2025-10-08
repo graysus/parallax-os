@@ -1,0 +1,4 @@
+*.img
+built-pkgs/*
+out/*
+pacman.conf
