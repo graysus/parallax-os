@@ -1,0 +1,5 @@
+
+type: "job"
+name: "pxos"
+interface: "python"
+script: "pxos.py"

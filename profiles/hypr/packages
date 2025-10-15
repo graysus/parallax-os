@@ -7,7 +7,7 @@ hyprlock hypridle hyprshot
 # other apps
 fwupd fwupd-efi waybar swww kitty rofi discover thunar thunar-volman
 thunar-archive-plugin thunar-media-tags-plugin cheese parole xfce4-dict
-waypaper mako
+waypaper mako pavucontrol
 
 # misc
 sddm-parallax noto-fonts-emoji noto-fonts-cjk

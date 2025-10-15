@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cf "/etc/sddm.conf.d/kde_settings.conf" &&\
+cf "/etc/xdg/kwalletrc" kwalletrc \
+        || fail "Failed to copy one or more files!"
+

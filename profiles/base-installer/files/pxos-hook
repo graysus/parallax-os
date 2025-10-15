@@ -1,0 +1,14 @@
+#!/usr/bin/ash
+# Part of Parallax OS. Licensed MIT.
+
+run_latehook() {
+	DATAPAR=$(cat /proc/cmdline | grep -o '\bdatapar=[^ ]*')
+	DATAPAR="${DATAPAR:8}"
+	mount -o remount,ro /new_root
+	mount "${DATAPAR}" /new_root/data
+	mount --bind /new_root/data/var /new_root/var
+	mount --bind /new_root/data/etc /new_root/etc
+	mount --bind /new_root/data/root /new_root/root
+	mount -t tmpfs tmpfs /new_root/mnt
+	
+}

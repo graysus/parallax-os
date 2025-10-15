@@ -118,6 +118,12 @@ for i in "${PROFILES[@]}"; do
 	source "./prepare"
 	popd
 done
+for i in "${PROFILES[@]}"; do
+	[ ! -d "profiles/$i/licenses" ] && continue
+	pushd "profiles/$i"
+	cp licenses/* "$BUILD/usr/share/licenses/"
+	popd
+done
 
 rm "$BUILD/boot/initramfs-"* &&\
 rm -rf "$BUILD/usr/share/pixmaps/artixlinux-logo"* \

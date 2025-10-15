@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+cre() {
+	if [ -z "$3" ]; then
+		LAST="$(rev <<< "$2" | cut -f1 -d/ | rev)"
+	else
+		LAST="$3"
+	fi
+	cp -r "$1/$LAST" "$BUILD/$2"
+}
+
+ca() { cre assets "$@"; }
+cf() { cre files "$@"; }
+
+ca "/usr/share/pixmaps/parallaxos-logo.png" &&\
+ca "/usr/share/pixmaps/parallaxos-logo-text.png" &&\
+ca "/usr/share/pixmaps/parallaxos-logo-dark.png" &&\
+ca "/usr/share/pixmaps/parallaxos-logo-text-dark.png" &&\
+ca "/usr/share/plymouth/themes/spinner/watermark.png" parallaxos-logo-text-lowres.png &&\
+cf "/etc/calamares" pxcalamares &&\
+cf "/etc/grub.d/10_linux" &&\
+cf "/etc/default/grub" grub-default &&\
+cf "/etc/mkinitcpio.conf" &&\
+cf "/lib/initcpio/hooks/pxos" pxos-hook &&\
+cf "/lib/initcpio/install/pxos" pxos-install &&\
+cf "/usr/lib/initcpio/install/plymouth" install-plymouth &&\
+cf "/usr/share/applications/calamares.desktop" &&\
+cf "/usr/lib/plymouth/plymouth-populate-initrd" &&\
+cf "/etc/sudoers" sudoers \
+	|| fail "Failed to copy one or more files!"
+
+cp -r "files/pxcalamares-modules/modules/"* "$BUILD/usr/lib/calamares/modules"
