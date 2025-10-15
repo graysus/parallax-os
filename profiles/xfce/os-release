@@ -1,7 +1,7 @@
 NAME="Parallax OS"
 PRETTY_NAME="Parallax OS"
 ID=parallax
-BUILD_ID=0.03-a16.2-xfce
+BUILD_ID=0.03-demo1-xfce
 ANSI_COLOR="92"
 HOME_URL="https://github.com/graysus/parallax-os"
 BUG_REPORT_URL="https://github.com/graysus/parallax-os/issues"
