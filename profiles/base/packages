@@ -9,7 +9,7 @@ pipewire-parallax pipewire-pulse-parallax wireplumber-parallax openssh-parallax
 # other stuff you might useful
 firefox distrobox podman bc flatpak zsh vim neovim nano sudo strace rustup go nodejs npm
 grub efibootmgr plymouth wget fish openbsd-netcat git cpio btop htop fastfetch pxos 
-uwufetch viu inxi chafa dosfstools
+uwufetch viu inxi chafa dosfstools tetoservice
 
 # linux
 linux-lts linux-lts-headers linux-firmware mkinitcpio nvidia-open-dkms dkms

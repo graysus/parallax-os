@@ -9,7 +9,7 @@ err() {
 }
 
 cleanup() {
-	[ -z "$(tr -d / <<< "$BUILD")" ] && return true
+	[ -z "$(tr -d / <<< "$BUILD")" ] && return 0
 
 	for i in "${FILESYSTEMS[@]}"; do
 		umount "$BUILD/$i"

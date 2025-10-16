@@ -7,7 +7,7 @@ parallax parallax-devel elogind-parallax networkmanager-parallax
 pipewire-parallax pipewire-pulse-parallax wireplumber-parallax openssh-parallax
 
 # other stuff you might useful
-firefox bc zsh vim neovim nano sudo strace
+firefox bc zsh vim neovim nano sudo strace tetoservice
 grub efibootmgr plymouth wget openbsd-netcat git cpio btop htop fastfetch pxos 
 uwufetch viu inxi chafa calamares dosfstools
 
