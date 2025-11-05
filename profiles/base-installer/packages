@@ -1,13 +1,14 @@
 # from the base package
-filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext pciutils
+filesystem gcc-libs glibc bash uutils-coreutils-parallax file findutils gawk grep procps-ng 
 psmisc shadow util-linux bzip2 gzip xz licenses esysusers etmpfiles iputils iproute2
+sed tar gettext pciutils
 
 # parallax itself + services
 parallax parallax-devel elogind-parallax networkmanager-parallax
 pipewire-parallax pipewire-pulse-parallax wireplumber-parallax openssh-parallax
 
 # other stuff you might useful
-firefox bc zsh vim neovim nano sudo strace tetoservice
+firefox bc zsh vim neovim nano sudo strace tetoservice flatpak
 grub efibootmgr plymouth wget openbsd-netcat git cpio btop htop fastfetch pxos 
 uwufetch viu inxi chafa calamares dosfstools
 

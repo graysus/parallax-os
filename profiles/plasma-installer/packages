@@ -1,7 +1,7 @@
 # kde
 plasma-desktop systemsettings plasma-nm konsole kinfocenter plasma-pa spectacle dolphin kwrite 
 pulseaudio-qt plasma-systemmonitor bluez bluedevil plasma-disks kwallet5 kwalletmanager kwallet
-kwallet-pam fwupd fwupd-efi okular kamoso
+kwallet-pam fwupd fwupd-efi okular kamoso discover
 
 # misc
 sddm-parallax noto-fonts-cjk

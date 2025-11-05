@@ -337,7 +337,7 @@ class FstabGenerator(object):
 
 def create_swapfile(root_mount_point, root_btrfs):
     """
-    Creates /swapfile in @p root_mount_point ; if the root filesystem
+    Creates /data/swapfile in @p root_mount_point ; if the root filesystem
     is on btrfs, then handle some btrfs specific features as well,
     as documented in
         https://wiki.archlinux.org/index.php/Swap#Swap_file
@@ -347,12 +347,12 @@ def create_swapfile(root_mount_point, root_btrfs):
     libcalamares.job.setprogress(0.2)
     if root_btrfs:
         # btrfs swapfiles must reside on a subvolume that is not snapshotted to prevent file system corruption
-        swapfile_path = os.path.join(root_mount_point, "swap/swapfile")
+        swapfile_path = os.path.join(root_mount_point, "swap/data/swapfile")
         with open(swapfile_path, "wb") as f:
             pass
         libcalamares.utils.host_env_process_output(["chattr", "+C", "+m", swapfile_path])  # No Copy-on-Write, no compression
     else:
-        swapfile_path = os.path.join(root_mount_point, "swapfile")
+        swapfile_path = os.path.join(root_mount_point, "data/swapfile")
         with open(swapfile_path, "wb") as f:
             pass
     # Create the swapfile; swapfiles are small-ish
@@ -404,9 +404,9 @@ def run():
             root_partitions = [ p["fs"].lower() for p in partitions if p["mountPoint"] == "/" ]
             root_btrfs = (root_partitions[0] == "btrfs") if root_partitions else False
             if root_btrfs:
-                partitions.append( dict(fs="swap", mountPoint=None, claimed=True, device="/swap/swapfile", uuid=None) )
+                partitions.append( dict(fs="swap", mountPoint=None, claimed=True, device="/swap/data/swapfile", uuid=None) )
             else:
-                partitions.append( dict(fs="swap", mountPoint=None, claimed=True, device="/swapfile", uuid=None) )
+                partitions.append( dict(fs="swap", mountPoint=None, claimed=True, device="/data/swapfile", uuid=None) )
         else:
             swap_choice = None
 
